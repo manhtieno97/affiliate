@@ -1,0 +1,10 @@
+apps:
+  - script : /var/www/chv_crawl/2021-question-and-answer/artisan
+    name     : 'crawl_chv:qa_2021'
+    interpreter : /usr/bin/php74
+    cwd : /var/www/chv_crawl/2021-question-and-answer/
+    exec_mode: fork
+    args : crawl:auto
+    autorestart : true
+    restart_delay : 120000
+    log_date_format : YYYY-MM-DD HH:mm Z
